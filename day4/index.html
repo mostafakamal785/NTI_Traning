@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-gray-800">
+    <div class="assgment1 flex flex-col">
+      <button
+        class="loadUsers text-3xl text-slate-300 bg-blue-600 p-2 rounded-md w-64 mx-auto my-8 hover:bg-blue-800"
+      >
+        load users
+      </button>
+      <div class="firstUsers flex flex-wrap justify-around"></div>
+      <div class="users flex flex-wrap gap-7 text-slate-600 p-3"></div>
+    </div>
+    <div class="assgment2 flex flex-col">
+      <button
+        class="loadposts text-3xl text-slate-300 bg-blue-600 p-2 rounded-md w-64 mx-auto my-8 hover:bg-blue-800"
+      >
+        load users
+      </button>
+      <div class="posts flex flex-wrap justify-around"></div>
+    </div>
+          <div class="task2 flex items-center w-full p-10 mx-auto gap-5">
+        <input
+          type="number "
+          class="w-24 rounded-lg bg-slate-500 shadow-md shadow-slate-700 text-white p-2 num1"
+        />
+        <select name="operation" id="operation" class=" rounded-lg bg-slate-500 shadow-md shadow-slate-700 text-white p-2 text-3xl">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+          <option value="%">%</option>
+        </select>
+        <input
+          type="number "
+          class="w-24 rounded-lg bg-slate-500 shadow-md shadow-slate-700 text-white p-2 num3 "
+        />
+        <button class="w-12 rounded-lg bg-blue-500 shadow-md shadow-slate-700 text-black p-2 equal text-3xl hover:bg-blue-800">=</button>
+        <input type="number " readonly class="w-20 rounded-lg bg-slate-500 shadow-md shadow-slate-700 text-white p-2 result"/>
+        <div class="errorHolder"></div>
+      </div>
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./calc.js"></script>
+  </body>
+</html>

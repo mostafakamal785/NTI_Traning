@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-gray-900">
+    <main class="">
+      <div class="task3 flex flex-col items-center gap-3 p-12">
+        <h1 class="text-4xl text-slate-300">Simple Multiplication Table</h1>
+        <input
+          type="number"
+          class="number bg-slate-800 w-60 h-10 border-rose-950 rounded-full p-3 text-slate-100"
+          placeholder="enter the number"
+        />
+        <button class="show text-3xl text-blue-600 bg-slate-950 p-3 rounded-full">show</button>
+        <div class="table text-3xl">
+          <ul class="list text-slate-400"></ul>
+        </div>
+      </div>
+      <div class="task2 flex flex-col items-center gap-3 p-12">
+        <h1 class="text-4xl text-slate-300">Simple Grade Checker</h1>
+
+        <input
+          type="text"
+          class="student-name bg-slate-800 w-60 h-10 border-rose-950 rounded-full p-3 text-slate-100"
+          placeholder="enter the name"
+        />
+        <input
+          type="number"
+          class="student-score bg-slate-800 w-60 h-10 border-rose-950 rounded-full p-3 text-slate-100"
+          placeholder="enter the score"
+        />
+        <button class="checkScore text-3xl text-blue-600 bg-slate-950 p-3 rounded-full">
+          check
+        </button>
+        <div class="result text-3xl"></div>
+      </div>
+      <div class="task1 flex flex-col items-center gap-3 p-12">
+        <h1 class="text-4xl text-slate-300">Age Checker</h1>
+
+        <input
+          type="number"
+          name="theAge"
+          id="theAge"
+          class="bg-slate-800 w-60 h-10 border-rose-950 rounded-full p-3 text-slate-100"
+          placeholder="enter th age"
+          min="0"
+        />
+        <button class="checkAge text-3xl text-blue-600 bg-slate-950 p-3 rounded-full">check</button>
+        <div class="warning text-3xl"></div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

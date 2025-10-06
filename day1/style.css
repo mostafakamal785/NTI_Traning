@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.nav-btn.active{
+    background-color: #2563eb; /* Tailwind's blue-600 */
+    color: white;
+}
+.nav-btn:hover{
+    background-color: #2563eb; /* Tailwind's blue-600 */
+    color: white;
+}

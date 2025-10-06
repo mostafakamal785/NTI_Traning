@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-gray-600">
+    <main class="">
+      <div class="task1 flex justify-between items-center w-full p-10 mx-auto">
+        <div class="flex gap-5 flex-col">
+          <input
+            type="text"
+            class="text-white textinp bg-blue-900 rounded-3xl border-8 p-4 border-slate-950"
+          />
+          <button
+            class="update bg-blue-900 rounded-3xl border-8 border-slate-950 hover:bg-slate-500 hover:text-white"
+          >
+            update
+          </button>
+          <button
+            class="undo bg-blue-900 rounded-3xl border-8 border-slate-950 hover:bg-slate-500 hover:text-white"
+          >
+            undo
+          </button>
+          <input
+            type="color"
+            class="textColor bg-blue-900 border-8 border-slate-950 w-20 h-10"
+          /><button
+            class="random bg-blue-900 rounded-3xl border-8 border-slate-950 hover:bg-slate-500 hover:text-white"
+          >
+            random color
+          </button>
+        </div>
+        <h1
+          class="paragraaaaaaa text-6xl text-white bg-blue-900 rounded-3xl border-8 border-slate-950 p-10"
+        >
+          Hello
+        </h1>
+      </div>
+      <div class="task2 flex items-center w-full p-10 mx-auto gap-5">
+        <input
+          type="number "
+          class="w-12 rounded-lg bg-slate-800 shadow-md shadow-slate-700 text-white p-2 num1"
+        />
+        <select name="operation" id="operation" class=" rounded-lg bg-slate-800 shadow-md shadow-slate-700 text-white p-2 text-3xl">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+          <option value="%">%</option>
+        </select>
+        <input
+          type="number "
+          class="w-12 rounded-lg bg-slate-800 shadow-md shadow-slate-700 text-white p-2 num3 "
+        />
+        <button class="w-12 rounded-lg bg-lime-900 shadow-md shadow-slate-700 text-black p-2 equal text-3xl hover:bg-lime-600">=</button>
+        <input type="number " readonly class="w-20 rounded-lg bg-slate-800 shadow-md shadow-slate-700 text-white p-2 result"/>
+      </div>
+    </main>
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./calc.js"></script>
+  </body>
+</html>
