@@ -6,7 +6,7 @@ import userRoutes from './routes/user.Routes.js';
 import errorHnadler from './middleware/errorHandeler.js';
 
 import helmet from 'helmet';
-import ExpressMongoSanitize from 'express-mongo-sanitize';
+import mongoSanitize  from 'express-mongo-sanitize';
 import rateLimit from 'express-rate-limit';
 import cookieParser from 'cookie-parser';
 
