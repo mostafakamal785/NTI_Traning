@@ -1,4 +1,4 @@
-````markdown
+````
 # 🧭 Day 1 – Introduction to Web Development & JavaScript Basics
 
 ## 🌐 Overview
@@ -50,5 +50,15 @@ for (let i = 0; i < 5; i++) {
 > It reminded me how important it is to understand *how JavaScript actually runs in the browser* and to avoid rushing into frameworks before mastering these basics.
 
 I plan to reinforce these concepts by solving small JS exercises daily — focusing on logic rather than syntax memorization.
+
+---
+
+## 📚 Next Steps
+
+* Practice with simple JS challenges (loops, conditionals, and scopes).
+* Explore the difference between **execution context** and **scope chain**.
+* Prepare for Day 2: **Asynchronous JavaScript (callbacks & promises)**.
+
+```
 
 ---
