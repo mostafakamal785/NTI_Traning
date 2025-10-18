@@ -7,3 +7,6 @@
 ::1 - - [11/Oct/2025:16:16:54 +0000] "DELETE /api/photo/ HTTP/1.1" 200 25 "-" "PostmanRuntime/7.48.0"
 ::1 - - [11/Oct/2025:16:17:01 +0000] "GET /api/photo/ HTTP/1.1" 200 891471 "-" "PostmanRuntime/7.48.0"
 ::1 - - [11/Oct/2025:16:17:05 +0000] "GET /api/photo/ HTTP/1.1" 200 891471 "-" "PostmanRuntime/7.48.0"
+::1 - - [13/Oct/2025:13:53:08 +0000] "GET /api/photo/ HTTP/1.1" 200 891471 "-" "PostmanRuntime/7.48.0"
+::1 - - [13/Oct/2025:13:53:22 +0000] "GET /api/photo/ HTTP/1.1" 200 891471 "-" "PostmanRuntime/7.48.0"
+::1 - - [13/Oct/2025:13:54:21 +0000] "DELETE /api/photo/ HTTP/1.1" 200 25 "-" "PostmanRuntime/7.48.0"
