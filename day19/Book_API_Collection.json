@@ -1,0 +1,49 @@
+{
+  "info": {
+    "name": "Book API Collection",
+    "_postman_id": "example-uuid",
+    "description": "Collection to test all Book API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all books",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/books"
+      }
+    },
+    {
+      "name": "Get book by ID",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/books/1"
+      }
+    },
+    {
+      "name": "Add a book",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{ \"title\": \"New Book\" }" },
+        "url": "http://localhost:3000/books"
+      }
+    },
+    {
+      "name": "Update book",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{ \"title\": \"Updated Book\" }" },
+        "url": "http://localhost:3000/books/1"
+      }
+    },
+    {
+      "name": "Delete book",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:3000/books/1"
+      }
+    }
+  ]
+}
