@@ -1,0 +1,48 @@
+<div class="max-w-2xl mx-auto p-6">
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-2xl font-bold text-gray-800">Product List</h2>
+    <div class="text-sm text-gray-600">
+      <span class="bg-green-100 text-green-800 px-2 py-1 rounded"
+        >Total: {{ products.length }}</span
+      >
+    </div>
+  </div>
+
+  <div class="space-y-4 mb-8">
+    @for (product of products; track product.name; let i = $index) {
+    <app-product-item
+      [product]="product"
+      [index]="i"
+      (productSelected)="onProductSelected($event)"
+      (productRemoved)="onProductRemoved($event)"
+      class="block"
+    >
+    </app-product-item>
+    }
+  </div>
+
+  @if (lastSelectedProduct) {
+  <div class="bg-green-50 border border-green-200 rounded-lg p-4 transition-all duration-300 mb-4">
+    <h3 class="text-lg font-semibold text-green-800 flex items-center">
+      <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+        <path
+          fill-rule="evenodd"
+          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      Last Selected Product:
+      <span class="text-green-600 ml-1">{{ lastSelectedProduct }}</span>
+    </h3>
+  </div>
+  } @if (products.length === 0 || removedProducts.length > 0) {
+  <div class="text-center">
+    <button
+      (click)="resetProducts()"
+      class="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-6 rounded transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+    >
+      Reset Products
+    </button>
+  </div>
+  }
+</div>

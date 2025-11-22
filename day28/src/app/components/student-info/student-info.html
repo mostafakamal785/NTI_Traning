@@ -1,0 +1,25 @@
+<div class="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto mt-8">
+  <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Student Information</h2>
+
+  <div class="space-y-4">
+    <div class="flex justify-between items-center border-b pb-2">
+      <span class="font-semibold text-gray-700">Student Name:</span>
+      <span class="text-blue-600 font-medium">{{ studentName | uppercase }}</span>
+    </div>
+
+    <div class="flex justify-between items-center border-b pb-2">
+      <span class="font-semibold text-gray-700">Date of Birth:</span>
+      <span class="text-green-600">{{ dateOfBirth | date:'dd-MMM-yyyy' }}</span>
+    </div>
+
+    <div class="flex justify-between items-center border-b pb-2">
+      <span class="font-semibold text-gray-700">Score:</span>
+      <span class="text-purple-600 font-medium">{{ score | percent:'1.1-2' }}</span>
+    </div>
+
+    <div class="flex justify-between items-center border-b pb-2">
+      <span class="font-semibold text-gray-700">Price:</span>
+      <span class="text-orange-600 font-medium">{{ price | currency:'USD':'symbol':'1.0-0' }}</span>
+    </div>
+  </div>
+</div>

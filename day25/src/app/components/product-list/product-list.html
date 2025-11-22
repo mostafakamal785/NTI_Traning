@@ -1,0 +1,8 @@
+<input [(ngModel)]="filterKeyword" placeholder="Search product title..." />
+<ul>
+  @for(product of products; track product.id) {
+  @if(!filterKeyword || product.title.toLowerCase().includes(filterKeyword.toLowerCase())) {
+      <app-product-card [product]="product"></app-product-card>
+
+  }}
+</ul>

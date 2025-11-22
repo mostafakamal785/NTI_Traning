@@ -1,0 +1,60 @@
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8 text-center">
+
+    <!-- الرسم المتحرك/الأيقونة -->
+    <div class="relative">
+      <div class="mx-auto h-48 w-48 flex items-center justify-center">
+        <!-- SVG Animation -->
+        <svg class="w-full h-full text-gray-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+
+        <!-- رقم 404 -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span class="text-6xl font-bold text-gray-700">404</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- النص الرئيسي -->
+    <div class="space-y-4">
+      <h1 class="text-3xl font-bold text-gray-900 tracking-tight">
+        Page Not Found
+      </h1>
+
+      <p class="text-lg text-gray-600 max-w-sm mx-auto leading-relaxed">
+        Oops! The page you're looking for seems to have wandered off into the digital void.
+      </p>
+
+      <p class="text-sm text-gray-500">
+        Error code: 404 - Page not found
+      </p>
+    </div>
+
+    <!-- أزرار الإجراء -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+      <button
+        (click)="goBack()"
+        class="px-6 py-3 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition-all duration-200 transform hover:scale-105 shadow-sm">
+        ← Go Back
+      </button>
+
+      <button
+        (click)="goHome()"
+        class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-all duration-200 transform hover:scale-105 shadow-lg shadow-blue-200">
+        🏠 Go Home
+      </button>
+    </div>
+
+    <!-- روابط إضافية -->
+    <div class="pt-8 border-t border-gray-200 mt-8">
+      <p class="text-sm text-gray-500 mb-4">Quick Links</p>
+      <div class="flex justify-center space-x-6">
+        <a href="/products" class="text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors">Products</a>
+        <a href="/about" class="text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors">About</a>
+        <a href="/contact" class="text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors">Contact</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="p-6">
+
+  <ul class="space-y-4">
+    @for(student of students; track student.id; let first = $first) {
+
+          <app-studnt-card-component
+            #studentCard
+            [name]="student.name"
+            [age]="student.age"
+            [backgroundColor]="'white'">
+          </app-studnt-card-component>
+
+    }
+  </ul>
+
+  <div class="mt-6 space-x-4">
+    <button
+      class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
+      (click)="changeFirstStudentColor()">
+      تغيير لون أول طالب
+    </button>
+
+    <button
+      class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors"
+      (click)="changeAllStudentColor()">
+      تغيير لون جميع الطلاب
+    </button>
+  </div>
+</div>

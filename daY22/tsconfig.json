@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    /* ---------- File Layout ---------- */
+    "rootDir": "./src", // Folder that contains your TypeScript source files
+    "outDir": "./dist", // Folder where compiled JavaScript files will be saved
+
+    /* ---------- Language & Module Settings ---------- */
+    "target": "ES2020", // Output modern JS syntax (supports async/await, optional chaining, etc.)
+    "module": "ESNext", // Use native ES Modules (import/export syntax)
+    "moduleResolution": "bundler", // Modern module resolution method (recommended for ESM projects)
+    "lib": ["ES2020", "dom"], // Include modern JS features + browser APIs (remove "dom" for pure backend)
+    "types": ["node"], // Include Node.js global types (e.g. process, __dirname)
+
+    /* ---------- Output Options ---------- */
+    "sourceMap": false, // Disable .map files (use true if you need debugging)
+    "declaration": false, // Don’t generate .d.ts files (type definitions)
+    "declarationMap": false, // Don’t generate .d.ts.map files (since declarations are disabled)
+    "esModuleInterop": true, // Allow default imports from CommonJS modules (e.g. import express from "express")
+    "allowSyntheticDefaultImports": true, // Support synthetic default imports even if not present in module
+    "forceConsistentCasingInFileNames": true, // Ensure file imports use consistent letter casing across OSes
+
+    /* ---------- Strict Type Checking ---------- */
+    "strict": true, // Enable all strict type-checking options
+    "noUncheckedIndexedAccess": true, // Forces you to handle undefined when indexing arrays/objects
+    "exactOptionalPropertyTypes": true, // Makes optional properties’ types truly reflect being optional
+
+    /* ---------- Module Safety ---------- */
+    "isolatedModules": true, // Ensure each file can be compiled independently (important for ESM/ts-node)
+    "skipLibCheck": true, // Skip checking type definitions in node_modules for faster builds
+    "moduleDetection": "force", // Enforce ES module detection (avoids confusion with CommonJS)
+
+    /* ---------- Clean Code / Warnings ---------- */
+    "noUnusedLocals": true, // Warn if a variable is declared but not used
+    "noUnusedParameters": true, // Warn if a function parameter is never used
+    "noImplicitReturns": true // Warn if not all code paths in a function return a value
+  },
+
+  /* ---------- File Inclusion ---------- */
+  "include": ["src"], // Only compile TypeScript files from the src folder
+  "exclude": ["node_modules", "dist"] // Ignore node_modules and the build output folder
+}

@@ -1,0 +1,110 @@
+<li class="mb-6">
+  <div
+    class="product-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group h-full flex flex-col transform hover:-translate-y-1"
+  >
+    <!-- صورة المنتج مع تأثيرات -->
+    <div class="relative overflow-hidden flex-shrink-0">
+      <img
+        [src]="product.image"
+        [alt]="product.title"
+        class="product-image w-full h-64 object-contain p-4 bg-gray-50 transition-transform duration-500 group-hover:scale-105"
+      />
+
+      <!-- شريط الحالة -->
+      <div class="absolute top-3 left-3 flex flex-col gap-2">
+        <span
+          [class]="product.inStock ? 'bg-green-500 text-white' : 'bg-red-500 text-white'"
+          class="px-3 py-1 rounded-full text-xs font-bold shadow-md"
+        >
+          {{ product.inStock ? 'In Stock' : 'Out of Stock' }}
+        </span>
+        @if (product.rating.rate > 4.2) {
+        <span class="bg-amber-500 text-white px-2 py-1 rounded-full text-xs font-bold shadow-md">
+          ⭐ Popular
+        </span>
+        }
+      </div>
+    </div>
+
+    <!-- محتوى البطاقة -->
+    <div class="p-5 flex-grow flex flex-col">
+      <!-- الفئة -->
+      <span class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">
+        {{ getcategory() }}
+      </span>
+
+      <!-- العنوان -->
+      <h3
+        class="product-name text-lg font-bold text-gray-900 mb-2 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors"
+      >
+        {{ product.title }}
+      </h3>
+
+      <!-- الوصف -->
+      <p class="product-description text-gray-600 text-sm mb-4 line-clamp-2 flex-grow">
+        {{ product.description }}
+      </p>
+      <h3
+        class="product-name text-lg font-bold text-gray-900 mb-2 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors"
+      >
+        @for(tag of product.tags; track tag) {
+          <span class="inline-block bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full mr-1 mb-1">
+            {{ tag }}
+          </span>
+        }
+      </h3>
+
+      <!-- التقييم -->
+      <div class="rating flex items-center mb-4">
+        <div class="flex items-center space-x-1">
+          @for (star of [1,2,3,4,5]; track star) {
+          <span [class]="getStarClass(star)"> ★ </span>
+          }
+        </div>
+        <span class="rating-value text-sm text-gray-500 ml-2">
+          {{ product.rating.rate }} ({{ product.rating.count }} reviews)
+        </span>
+      </div>
+
+      <!-- السعر والإجراءات -->
+      <div class="mt-auto pt-4 border-t border-gray-100">
+        <div class="flex items-center justify-between">
+          <div class="flex items-baseline gap-2">
+            <span class="price text-2xl font-bold text-gray-900"> ${{ product.price }} </span>
+            @if (product.price > 100) {
+            <span class="text-green-600 text-sm font-semibold bg-green-50 px-2 py-1 rounded">
+              Free Shipping
+            </span>
+            }
+          </div>
+
+          <!-- أزرار الإجراءات -->
+          <div class="flex items-center space-x-2">
+            <button
+              class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-full transition-colors duration-200 group/heart"
+              [class.bg-red-50]="isLiked"
+              (click)="toggleLike()"
+            >
+              <span
+                [class]="isLiked ? 'text-red-500' : 'text-gray-400'"
+                class="text-xl transition-all duration-300 group-hover/heart:scale-110"
+              >
+                {{ isLiked ? '♥' : '♡' }}
+              </span>
+            </button>
+
+            <button
+              [disabled]="!product.inStock"
+              class="disabled:bg-gray-300 disabled:cursor-not-allowed text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+              [class.bg-blue-600]="isAddedToCart"
+              [class.bg-gray-400]="!isAddedToCart"
+              (click)="addToCart()"
+            >
+              {{ isAddedToCart ? 'Added' : 'Add to Cart' }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
